@@ -1,0 +1,8 @@
+{
+    "name": "js/crud",
+    "description": "crud",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}

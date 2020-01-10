@@ -1,0 +1,24 @@
+<?php //die('hi');
+	$collection = $block->getResult();
+	foreach($collection as $item):
+	?>
+
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>		
+		<th>Created At</th>
+		<th>Updated At</th>
+		<th colspan="2">Action</th>
+	</tr>
+	<tr>
+		<td><?php echo $item->getData('post_id'); ?></td>
+		<td><?php echo $item->getData('name'); ?></td>
+		<td><?php echo $item->getData('created_at'); ?></td>
+		<td><?php echo $item->getData('updated_at'); ?></td>
+		<td><a href="<?php echo $block->getUrl('crud/index/edit').'id/'.$item->getData('post_id'); ?>" class="action primary">Edit</a></td>
+		<td><a href="<?php echo $block->getUrl('crud/index/delete').'?id='.$item->getData('post_id'); ?>" class="action primary">Delete</a></td>
+		<td><a href="<?php echo $block->getUrl('crud/index/insert');?>"class="action primary">Add Record</a></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
